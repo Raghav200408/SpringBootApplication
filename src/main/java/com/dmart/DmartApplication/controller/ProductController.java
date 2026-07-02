@@ -49,6 +49,8 @@ public class ProductController {
 
         logger.info("Add Product request received.");
 
+        logger.info("in method addProduct ");
+        
         try {
 
             String uploadDir = "C:/DmartUploads/";
