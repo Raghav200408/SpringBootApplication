@@ -50,7 +50,7 @@ public class ProductController {
         logger.info("Add Product request received.");
 
         try {
-
+            
             String uploadDir = "C:/DmartUploads/";
 
             File dir = new File(uploadDir);
