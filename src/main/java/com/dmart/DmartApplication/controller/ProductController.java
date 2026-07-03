@@ -44,7 +44,7 @@ public class ProductController {
     @PostMapping(consumes = "multipart/form-data")
     public String addProduct(
 
-    		 @ModelAttribute ProductDTO p,
+    		 @RequestPart("product") ProductDTO p,
     	     @RequestPart("image") MultipartFile image) {
 
         logger.info("Add Product request received.");
@@ -164,7 +164,7 @@ public class ProductController {
     @PutMapping(value = "/{id}", consumes = "multipart/form-data")
     public String updateProduct(
     		  @PathVariable("id") int id,
-    		  @ModelAttribute ProductDTO p,
+    		  @RequestPart("product") ProductDTO p,
     	        @RequestPart(value = "image", required = false) MultipartFile image) {
 
         logger.info("Update Product request received. ProductId={}", id);
